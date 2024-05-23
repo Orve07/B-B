@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিচার ও বিচিত্র</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>বিচার ও বিচিত্র</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#writings">My Writings</a></li>
+                <li><a href="#invite">Invite Writings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p>I am Orve, a writer and the founder of বিচার ও বিচিত্র.</p>
+            <p>I am also a student, passionate about literature and creative expression.</p>
+        </section>
+        <section id="writings">
+            <h2>My Writings</h2>
+            <ul id="writings-list">
+                <!-- Links to stories will be dynamically added here -->
+            </ul>
+        </section>
+        <section id="invite">
+            <h2>Invite Writings</h2>
+            <p>If you'd like to contribute your writing to বিচার ও বিচিত্র, please contact me at orve@example.com.</p>
+        </section>
+    </div>
+    <script>
+        // Add your stories here as {title: 'Story Title', link: 'path/to/story.html'}
+        const stories = [
+            { title: 'Story 1', link: 'writings/story1.html' },
+            { title: 'Story 2', link: 'writings/story2.html' },
+        ];
 
+        const writingsList = document.getElementById('writings-list');
+        stories.forEach(story => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = story.link;
+            a.textContent = story.title;
+            li.appendChild(a);
+            writingsList.appendChild(li);
+        });
+    </script>
+</body>
+</html> 
